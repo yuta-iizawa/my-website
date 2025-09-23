@@ -3,44 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YOLO</title>
+  <title>YOLO - Vintage Store</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <img src="images/logo.jpeg" alt="YOLO Logo" class="logo">
+    <img src="images/logo.JPG" alt="YOLO Logo" class="logo">
     <nav>
-      <button onclick="showSection('about')">About</button>
-      <button onclick="showSection('access')">Access</button>
-      <button onclick="showSection('contact')">Contact</button>
+      <button class="menu-btn" data-target="about">About</button>
+      <button class="menu-btn" data-target="access">Access</button>
+      <button class="menu-btn" data-target="contact">Contact</button>
     </nav>
   </header>
 
+  <section class="hero">
+    <h1>YOLO</h1>
+    <p>You Only Live Once</p>
+  </section>
+
   <main>
-    <section id="about" class="section active">
-      <h1>About YOLO</h1>
-      <p>YOLO - You Only Live Once.<br>
-      Specializing in vintage POLO Ralph Lauren fashion.<br>
-      Opened February 2028, located in Sapporo.</p>
+    <section id="about" class="content-section active">
+      <h2>About</h2>
+      <p>YOLO is a vintage clothing store specializing in POLO Ralph Lauren items.</p>
+      <p>Opened: February 2028</p>
+      <p>Owner: Yuta Iizawa</p>
+      <p>Company: YOLO Co., Ltd.</p>
     </section>
 
-    <section id="access" class="section">
-      <h1>Access</h1>
-      <p>Address: Toyohira 1-2-3-4, Toyohira-ku, Sapporo<br>
-      Business Hours: 10:00 - 19:00<br>
-      Closed: Monday & Tuesday</p>
+    <section id="access" class="content-section">
+      <h2>Access</h2>
+      <p>Address: 札幌市豊平区豊平1-2-3-4</p>
+      <p>Business Hours: 10:00 - 19:00 (Closed on Mon & Tue)</p>
+      <a href="https://www.google.com/maps/search/札幌市豊平区豊平1-2-3-4" target="_blank">View on Map</a>
     </section>
 
-    <section id="contact" class="section">
-      <h1>Contact</h1>
-      <p>Email: <a href="mailto:yolo_official@gmail.com">yolo_official@gmail.com</a><br>
-      Instagram: <a href="https://instagram.com/yuta_0929_" target="_blank">@yuta_0929_</a></p>
+    <section id="contact" class="content-section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:yolo_official@gmail.com">yolo_official@gmail.com</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/yuta_0929_/" target="_blank">@yuta_0929_</a></p>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; YOLO Co., Ltd. All Rights Reserved.</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>

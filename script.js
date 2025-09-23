@@ -1,11 +1,18 @@
-function showSection(id) {
-  const sections = document.querySelectorAll('.section');
-  sections.forEach(sec => sec.classList.remove('active'));
-  const active = document.getElementById(id);
-  active.classList.add('active');
-}
+const menuButtons = document.querySelectorAll('.menu-btn');
+const sections = document.querySelectorAll('.content-section');
 
-// 初回表示でAboutを表示
-document.addEventListener('DOMContentLoaded', () => {
-  showSection('about');
+menuButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.getAttribute('data-target');
+    
+    sections.forEach(sec => {
+      sec.classList.toggle('active', sec.id === targetId);
+    });
+
+    // smooth scroll to content
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
 });
