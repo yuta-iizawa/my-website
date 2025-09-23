@@ -1,41 +1,22 @@
-// スクロールでヘッダーの背景を変える
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  if(window.scrollY > 50){
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
+// Smooth scroll for menu links
+document.querySelectorAll('.menu a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    target.scrollIntoView({ behavior: 'smooth' });
+  });
 });
 
-// スクロールでセクションをフェードイン
-const faders = document.querySelectorAll('.fade-in');
-const appearOptions = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px"
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+// Fade-in effect on scroll
+const cards = document.querySelectorAll('.card');
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if(!entry.isIntersecting){
-      return;
-    } else {
-      entry.target.classList.add('fade-in');
-      appearOnScroll.unobserve(entry.target);
+    if(entry.isIntersecting){
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+      observer.unobserve(entry.target);
     }
   });
-}, appearOptions);
+}, { threshold: 0.1 });
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
-
-// スムーズスクロール
-document.querySelectorAll('nav a').forEach(anchor => {
-  anchor.addEventListener('click', function(e){
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
+cards.forEach(card => observer.observe(card));

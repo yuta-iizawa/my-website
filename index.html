@@ -2,51 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YOLO Vintage Shop</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <h1>YOLO</h1>
-      <p class="subtitle">You Only Live Once.</p>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#access">Access</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+
+  <header class="header">
+    <h1 class="logo">YOLO</h1>
+    <p class="tagline">You Only Live Once.</p>
+    <nav class="menu">
+      <a href="#about">About</a>
+      <a href="#access">Access</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <section id="about" class="hero">
-      <div class="overlay fade-in">
-        <h2>About</h2>
-        <p>YOLO is a specialized POLO Ralph Lauren vintage shop. Opened in Feb 2028, we offer unique fashion items with black & white style and red accents.</p>
-        <p>Representative: Yuta Iizawa<br>Company: YOLO Inc.</p>
-      </div>
-    </section>
+  <section id="about" class="section about">
+    <div class="card">
+      <h2>About Us</h2>
+      <p>YOLO is a vintage fashion store specializing in POLO Ralph Lauren. Opened in February 2028, operated by Yuta Iizawa under YOLO Inc.</p>
+    </div>
+  </section>
 
-    <section id="access" class="fade-in">
+  <section id="access" class="section access">
+    <div class="card">
       <h2>Access</h2>
-      <p>Address: 2-2-1-2 Toyohira, Toyohira-ku, Sapporo, Hokkaido<br>
-      Open: 11:00 - 20:00<br>
-      Closed: Wednesday</p>
-    </section>
+      <p>Address: Sapporo, Toyohira 1-2-3-4</p>
+      <p>Hours: 10:00 - 19:00 (Closed on Monday & Tuesday)</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Sapporo+Toyohira+1-2-3-4" target="_blank" class="btn">View on Map</a>
+    </div>
+  </section>
 
-    <section id="contact" class="fade-in">
+  <section id="contact" class="section contact">
+    <div class="card">
       <h2>Contact</h2>
-      <p>Instagram: <a href="https://www.instagram.com/yuta_0929_" target="_blank">@yuta_0929_</a><br>
-      Email: contact@yolo.com<br>
-      Phone: 011-123-4567</p>
-    </section>
-  </main>
+      <p>Email: <a href="mailto:yolo_official@gmail.com">yolo_official@gmail.com</a></p>
+      <a href="mailto:yolo_official@gmail.com" class="btn">Send Mail</a>
+      <p>Instagram: <a href="https://instagram.com/yuta_0929_" target="_blank">@yuta_0929_</a></p>
+    </div>
+  </section>
 
-  <footer>
+  <footer class="footer">
     <p>&copy; 2028 YOLO Inc. All rights reserved.</p>
   </footer>
 
