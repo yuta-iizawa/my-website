@@ -1,69 +1,103 @@
+/* 全体の基本設定 */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: "Hiragino Kaku Gothic Pro", "Helvetica Neue", Arial, sans-serif;
-    color: #fff;
+    font-family: "Hiragino Kaku Gothic ProN", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    scroll-behavior: smooth;
   }
   
+  /* ヘッダー */
   header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 40px;
-    background: rgba(0,0,0,0.7);
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 1000;
   }
   
-  .logo {
+  header img {
     height: 50px;
   }
   
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav ul li a {
-    color: #fff;
+  nav a {
     text-decoration: none;
+    color: #000;
+    margin-left: 30px;
     font-weight: bold;
+    transition: color 0.3s ease;
   }
   
-  main {
+  nav a:hover {
+    color: #555;
+  }
+  
+  /* Homeセクション */
+  .home {
+    height: 100vh;
+    background: url('images/background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .home-text {
+    color: #fff;
+    font-size: 3em;
+    max-width: 80%;
+  }
+  
+  /* Section共通 */
+  .content section {
+    padding: 100px 20px;
     min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
-    padding-top: 80px;
-  }
-  
-  .content {
-    background: rgba(0,0,0,0.6);
-    padding: 30px;
-    border-radius: 8px;
+    align-items: center;
     text-align: center;
   }
   
-  .hero-text h1 {
-    font-size: 4rem;
-    margin: 0;
+  /* About, Access, Contact 背景 */
+  #about, #access, #contact {
+    background-color: #f4f4f4; /* 明るめ */
+    color: #000;
   }
   
-  .hero-text p {
-    font-size: 1.5rem;
-    margin: 5px 0;
+  /* フェードインアニメーション */
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease-out;
   }
   
+  .home-text, .content section {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  /* 文章中央寄せ */
+  section p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.2em;
+  }
+  
+  /* Footer */
   footer {
     text-align: center;
-    padding: 20px;
-    background: rgba(0,0,0,0.7);
-    position: relative;
+    padding: 30px 10px;
+    background: #222;
+    color: #fff;
+    font-size: 0.9em;
   }
   

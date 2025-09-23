@@ -1,12 +1,17 @@
-// 今回はシンプルにフェードインアニメーションだけ
-document.addEventListener("DOMContentLoaded", () => {
-    const contents = document.querySelectorAll(".content, .hero-text");
-    contents.forEach(el => {
-      el.style.opacity = 0;
-      setTimeout(() => {
-        el.style.transition = "opacity 1.5s";
-        el.style.opacity = 1;
-      }, 100);
-    });
+// DOM読み込み後にアニメーション設定
+document.addEventListener('DOMContentLoaded', () => {
+    const fadeElems = document.querySelectorAll('.home-text, .content section');
+  
+    const fadeIn = (entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+  
+    const observer = new IntersectionObserver(fadeIn, { threshold: 0.1 });
+    fadeElems.forEach(elem => observer.observe(elem));
   });
   
