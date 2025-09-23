@@ -1,6 +1,12 @@
-// ページロード時のフェード効果
-document.addEventListener('DOMContentLoaded', () => {
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(page => page.classList.add('fade'));
+// 今回はシンプルにフェードインアニメーションだけ
+document.addEventListener("DOMContentLoaded", () => {
+    const contents = document.querySelectorAll(".content, .hero-text");
+    contents.forEach(el => {
+      el.style.opacity = 0;
+      setTimeout(() => {
+        el.style.transition = "opacity 1.5s";
+        el.style.opacity = 1;
+      }, 100);
+    });
   });
   

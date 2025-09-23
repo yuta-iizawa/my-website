@@ -1,10 +1,7 @@
-/* 基本設定 */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: "Hiragino Kaku Gothic Pro", "Helvetica", "Arial", sans-serif;
-    background: #000 url('images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
+    font-family: "Hiragino Kaku Gothic Pro", "Helvetica Neue", Arial, sans-serif;
     color: #fff;
   }
   
@@ -12,81 +9,61 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: rgba(0,0,0,0.7);
+    padding: 10px 40px;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
   }
   
   .logo {
-    height: 60px;
-    width: auto;
+    height: 50px;
   }
   
-  nav a {
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
     color: #fff;
     text-decoration: none;
-    margin-left: 1.5rem;
     font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  nav a:hover {
-    opacity: 0.7;
   }
   
   main {
-    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px;
   }
   
-  .hero {
+  .content {
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 8px;
     text-align: center;
-    margin-top: 100px;
   }
   
-  .hero h1 {
+  .hero-text h1 {
     font-size: 4rem;
-    margin-bottom: 1rem;
+    margin: 0;
   }
   
-  .hero p {
+  .hero-text p {
     font-size: 1.5rem;
+    margin: 5px 0;
   }
   
-  /* ボタン */
-  .btn {
-    display: inline-block;
-    background-color: #fff;
-    color: #000;
-    padding: 0.6rem 1.2rem;
-    text-decoration: none;
-    margin-top: 1rem;
-    border-radius: 5px;
-    transition: 0.3s;
-  }
-  
-  .btn:hover {
-    opacity: 0.8;
-  }
-  
-  /* フェードアニメーション */
-  .fade {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-  }
-  
-  @keyframes fadeIn {
-    to { opacity: 1; }
-  }
-  
-  /* レスポンシブ */
-  @media(max-width:768px){
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-    .hero p {
-      font-size: 1rem;
-    }
-    nav a {
-      margin-left: 1rem;
-    }
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.7);
+    position: relative;
   }
   
