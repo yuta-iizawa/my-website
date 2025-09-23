@@ -1,99 +1,81 @@
-* {
+/* 共通 */
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
   }
   
-  body {
-    font-family: "Hiragino Kaku Gothic ProN", "Arial", sans-serif;
-    color: #fff;
-  }
-  
-  /* ヘッダー */
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: rgba(0,0,0,0.7);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+  }
+  
+  .logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
   
   .menu {
     list-style: none;
+    padding: 0;
     display: flex;
+    justify-content: center;
     gap: 30px;
+    margin-bottom: 10px;
   }
   
-  .menu li a {
-    color: #fff;
+  .menu a {
     text-decoration: none;
+    color: black;
     font-weight: bold;
-    transition: 0.3s;
+    transition: color 0.3s;
   }
   
-  .menu li a:hover {
-    opacity: 0.7;
+  .menu a:hover {
+    color: gray;
   }
   
-  .logo {
-    height: 60px;
+  footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    color: gray;
   }
   
-  /* HOMEページ */
+  /* Home */
   .home {
     background-image: url('images/background.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    color: white;
   }
   
-  .home-text h1 {
-    font-size: 5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  .home-text {
+    max-width: 80%;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
   }
   
-  .home-text p {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-  }
-  
-  /* About, Access, Contact ページ */
+  /* Other pages */
   .page {
-    background-color: #000;
+    background-color: #f9f9f9;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  }
+  
+  .page-content {
+    max-width: 800px;
+    margin: 100px auto 50px auto;
+    padding: 20px;
     text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .page-text h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .page-text p {
-    font-size: 1.3rem;
-    line-height: 1.6;
-  }
-  
-  /* フッター */
-  footer {
-    text-align: center;
-    padding: 15px 0;
-    background-color: rgba(0,0,0,0.7);
-    font-size: 0.9rem;
   }
   
