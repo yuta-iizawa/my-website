@@ -2,15 +2,40 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>私のホームページ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOLO - 古着屋</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1 id="title">ようこそ！</h1>
-  <p>これは私が初めて作ったホームページです。</p>
-  <button id="btn">ボタンを押す</button>
-  <p id="message">ここにメッセージが表示されます</p>
+  <header>
+    <h1>YOLO</h1>
+    <p>ビンテージ × ストリート 古着ショップ</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>おすすめアイテム</h2>
+      <div id="product-list" class="product-grid">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/200" alt="古着アイテム1">
+          <h3>ビンテージジャケット</h3>
+          <p>¥6,800</p>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/200" alt="古着アイテム2">
+          <h3>レトロシャツ</h3>
+          <p>¥4,200</p>
+        </div>
+      </div>
+      <button id="load-more">もっと見る</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 YOLO - All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+

@@ -1,14 +1,26 @@
-// HTMLが全て読み込まれてから実行
-document.addEventListener('DOMContentLoaded', () => {
-  const button = document.getElementById('btn');
-
-  button.addEventListener('click', () => {
-    // メッセージ変更
-    document.getElementById('message').textContent = 'ボタンがクリックされました！';
-
-    // 見出しの文字と色を変更
-    const title = document.getElementById('title');
-    title.textContent = 'クリックありがとう！🎉';
-    title.style.color = 'red';
+// ページのフェードイン
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.style.opacity = 0;
+  requestAnimationFrame(() => {
+    document.body.style.opacity = 1;
   });
+});
+
+// 「もっと見る」ボタンで商品追加
+document.addEventListener("DOMContentLoaded", () => {
+  const moreButton = document.getElementById("load-more");
+  const productList = document.getElementById("product-list");
+
+  if (moreButton && productList) {
+    moreButton.addEventListener("click", () => {
+      const newItem = document.createElement("div");
+      newItem.className = "product-card";
+      newItem.innerHTML = `
+        <img src="https://via.placeholder.com/200" alt="新しい古着アイテム">
+        <h3>新アイテム</h3>
+        <p>おしゃれな一点ものです！</p>
+      `;
+      productList.appendChild(newItem);
+    });
+  }
 });
