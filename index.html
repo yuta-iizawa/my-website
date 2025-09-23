@@ -2,49 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>YOLO Vintage Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOLO</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header class="header">
-    <h1 class="logo">YOLO</h1>
-    <p class="tagline">You Only Live Once.</p>
-    <nav class="menu">
-      <a href="#about">About</a>
-      <a href="#access">Access</a>
-      <a href="#contact">Contact</a>
+  <header>
+    <img src="images/logo.jpeg" alt="YOLO Logo" class="logo">
+    <nav>
+      <button onclick="showSection('about')">About</button>
+      <button onclick="showSection('access')">Access</button>
+      <button onclick="showSection('contact')">Contact</button>
     </nav>
   </header>
 
-  <section id="about" class="section about">
-    <div class="card">
-      <h2>About Us</h2>
-      <p>YOLO is a vintage fashion store specializing in POLO Ralph Lauren. Opened in February 2028, operated by Yuta Iizawa under YOLO Inc.</p>
-    </div>
-  </section>
+  <main>
+    <section id="about" class="section active">
+      <h1>About YOLO</h1>
+      <p>YOLO - You Only Live Once.<br>
+      Specializing in vintage POLO Ralph Lauren fashion.<br>
+      Opened February 2028, located in Sapporo.</p>
+    </section>
 
-  <section id="access" class="section access">
-    <div class="card">
-      <h2>Access</h2>
-      <p>Address: Sapporo, Toyohira 1-2-3-4</p>
-      <p>Hours: 10:00 - 19:00 (Closed on Monday & Tuesday)</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Sapporo+Toyohira+1-2-3-4" target="_blank" class="btn">View on Map</a>
-    </div>
-  </section>
+    <section id="access" class="section">
+      <h1>Access</h1>
+      <p>Address: Toyohira 1-2-3-4, Toyohira-ku, Sapporo<br>
+      Business Hours: 10:00 - 19:00<br>
+      Closed: Monday & Tuesday</p>
+    </section>
 
-  <section id="contact" class="section contact">
-    <div class="card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:yolo_official@gmail.com">yolo_official@gmail.com</a></p>
-      <a href="mailto:yolo_official@gmail.com" class="btn">Send Mail</a>
-      <p>Instagram: <a href="https://instagram.com/yuta_0929_" target="_blank">@yuta_0929_</a></p>
-    </div>
-  </section>
+    <section id="contact" class="section">
+      <h1>Contact</h1>
+      <p>Email: <a href="mailto:yolo_official@gmail.com">yolo_official@gmail.com</a><br>
+      Instagram: <a href="https://instagram.com/yuta_0929_" target="_blank">@yuta_0929_</a></p>
+    </section>
+  </main>
 
-  <footer class="footer">
-    <p>&copy; 2028 YOLO Inc. All rights reserved.</p>
+  <footer>
+    <p>&copy; YOLO Co., Ltd. All Rights Reserved.</p>
   </footer>
 
   <script src="script.js"></script>
