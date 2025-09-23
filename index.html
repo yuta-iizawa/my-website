@@ -1,41 +1,55 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YOLO - 古着屋</title>
+  <title>YOLO Vintage Shop</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>YOLO</h1>
-    <p>ビンテージ × ストリート 古着ショップ</p>
+    <div class="header-inner">
+      <h1>YOLO</h1>
+      <p class="subtitle">You Only Live Once.</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#access">Access</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>おすすめアイテム</h2>
-      <div id="product-list" class="product-grid">
-        <div class="product-card">
-          <img src="https://via.placeholder.com/200" alt="古着アイテム1">
-          <h3>ビンテージジャケット</h3>
-          <p>¥6,800</p>
-        </div>
-        <div class="product-card">
-          <img src="https://via.placeholder.com/200" alt="古着アイテム2">
-          <h3>レトロシャツ</h3>
-          <p>¥4,200</p>
-        </div>
+    <section id="about" class="hero">
+      <div class="overlay fade-in">
+        <h2>About</h2>
+        <p>YOLO is a specialized POLO Ralph Lauren vintage shop. Opened in Feb 2028, we offer unique fashion items with black & white style and red accents.</p>
+        <p>Representative: Yuta Iizawa<br>Company: YOLO Inc.</p>
       </div>
-      <button id="load-more">もっと見る</button>
+    </section>
+
+    <section id="access" class="fade-in">
+      <h2>Access</h2>
+      <p>Address: 2-2-1-2 Toyohira, Toyohira-ku, Sapporo, Hokkaido<br>
+      Open: 11:00 - 20:00<br>
+      Closed: Wednesday</p>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <p>Instagram: <a href="https://www.instagram.com/yuta_0929_" target="_blank">@yuta_0929_</a><br>
+      Email: contact@yolo.com<br>
+      Phone: 011-123-4567</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 YOLO - All rights reserved.</p>
+    <p>&copy; 2028 YOLO Inc. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-

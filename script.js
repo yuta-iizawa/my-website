@@ -1,26 +1,41 @@
-// ページのフェードイン
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.style.opacity = 0;
-  requestAnimationFrame(() => {
-    document.body.style.opacity = 1;
-  });
+// スクロールでヘッダーの背景を変える
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  if(window.scrollY > 50){
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
 });
 
-// 「もっと見る」ボタンで商品追加
-document.addEventListener("DOMContentLoaded", () => {
-  const moreButton = document.getElementById("load-more");
-  const productList = document.getElementById("product-list");
+// スクロールでセクションをフェードイン
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px"
+};
 
-  if (moreButton && productList) {
-    moreButton.addEventListener("click", () => {
-      const newItem = document.createElement("div");
-      newItem.className = "product-card";
-      newItem.innerHTML = `
-        <img src="https://via.placeholder.com/200" alt="新しい古着アイテム">
-        <h3>新アイテム</h3>
-        <p>おしゃれな一点ものです！</p>
-      `;
-      productList.appendChild(newItem);
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting){
+      return;
+    } else {
+      entry.target.classList.add('fade-in');
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+
+// スムーズスクロール
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
     });
-  }
+  });
 });
