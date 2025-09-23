@@ -1,103 +1,99 @@
-/* 全体の基本設定 */
-body, html {
+* {
     margin: 0;
     padding: 0;
-    font-family: "Hiragino Kaku Gothic ProN", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #fff;
-    color: #000;
-    scroll-behavior: smooth;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Arial", sans-serif;
+    color: #fff;
   }
   
   /* ヘッダー */
   header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(255,255,255,0.95);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 50px;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
     z-index: 1000;
   }
   
-  header img {
-    height: 50px;
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
   }
   
-  nav a {
+  .menu li a {
+    color: #fff;
     text-decoration: none;
-    color: #000;
-    margin-left: 30px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: 0.3s;
   }
   
-  nav a:hover {
-    color: #555;
+  .menu li a:hover {
+    opacity: 0.7;
   }
   
-  /* Homeセクション */
+  .logo {
+    height: 60px;
+  }
+  
+  /* HOMEページ */
   .home {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
     height: 100vh;
-    background: url('images/background.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
+    padding: 0 20px;
   }
   
-  .home-text {
-    color: #fff;
-    font-size: 3em;
-    max-width: 80%;
+  .home-text h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
   }
   
-  /* Section共通 */
-  .content section {
-    padding: 100px 20px;
+  .home-text p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  }
+  
+  /* About, Access, Contact ページ */
+  .page {
+    background-color: #000;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 50px 20px;
   }
   
-  /* About, Access, Contact 背景 */
-  #about, #access, #contact {
-    background-color: #f4f4f4; /* 明るめ */
-    color: #000;
+  .page-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
   }
   
-  /* フェードインアニメーション */
-  .fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 1s ease-out;
-  }
-  
-  .home-text, .content section {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  
-  /* 文章中央寄せ */
-  section p {
-    max-width: 800px;
-    margin: 0 auto;
+  .page-text p {
+    font-size: 1.3rem;
     line-height: 1.6;
-    font-size: 1.2em;
   }
   
-  /* Footer */
+  /* フッター */
   footer {
     text-align: center;
-    padding: 30px 10px;
-    background: #222;
-    color: #fff;
-    font-size: 0.9em;
+    padding: 15px 0;
+    background-color: rgba(0,0,0,0.7);
+    font-size: 0.9rem;
   }
   
