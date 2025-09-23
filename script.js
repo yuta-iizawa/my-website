@@ -1,2 +1,6 @@
-// 現状は固定ページなので特にJSは不要
-// 将来的にアニメーションやフェードインを追加可能
+// ページロード時のフェード効果
+document.addEventListener('DOMContentLoaded', () => {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.add('fade'));
+  });
+  
