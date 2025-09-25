@@ -2,34 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>YOLO - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOLO Vintage Polo</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <img src="images/logo.JPG" alt="YOLO Logo" class="logo">
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="access.html">Access</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="home">
+<header>
+  <div class="logo-container">
+    <a href="#home"><img src="images/logo.JPG" alt="YOLO Logo" class="logo"></a>
+    <div class="menu-btn" id="menu-btn">&#9776;</div>
+  </div>
+  <nav class="drawer" id="drawer">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#access">Access</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#sns">SNS</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="home" class="section home">
     <div class="home-text">
       <h1>YOLO</h1>
       <p>Sapporo's Vintage Polo Specialist.<br>
-         You Only Live Once.<br>
-         Discover classic Polo styles curated for enthusiasts.</p>
+      You Only Live Once.<br>
+      Classic Polo styles curated for enthusiasts.</p>
+      <p>Location: Toyohira-ku, Sapporo</p>
     </div>
-  </main>
+  </section>
 
-  <footer>
-    <p>© 2028 YOLO Co., Ltd. | Instagram: @yuta_0929_</p>
-  </footer>
-  <script src="script.js"></script>
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="content">
+      <h2>About YOLO</h2>
+      <p>Founder: Yuta Iizawa</p>
+      <p>Opened on the 10000th day since birth (Feb 2028), following a lifelong dream to run a business doing what I love.</p>
+      <p>Specialized in Vintage Polo Ralph Lauren for ages 10-40+, from beginners to enthusiasts, with detailed product tags for easy browsing.</p>
+    </div>
+  </section>
+
+  <!-- ACCESS -->
+  <section id="access" class="section access">
+    <div class="content">
+      <h2>Access</h2>
+      <p>Address: Toyohira 2-2-1-2, Sapporo</p>
+      <p>Nearest Station: Kikusui Subway Station, 2 min walk</p>
+      <p><a href="https://goo.gl/maps/xxxxxxxxx" target="_blank">View on Google Maps</a></p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="content">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="tel" placeholder="Your Phone">
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="contact-confirm" style="display:none;">Your message has been sent!</p>
+    </div>
+  </section>
+
+  <!-- SNS -->
+  <section id="sns" class="section sns">
+    <div class="content">
+      <h2>Follow Us</h2>
+      <ul>
+        <li>Instagram: <a href="https://instagram.com/yuta_0929_" target="_blank">@yuta_0929_</a></li>
+        <li>Facebook: Coming soon</li>
+        <li>Official LINE: Coming soon</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2028 YOLO Co., Ltd.</p>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
 </html>

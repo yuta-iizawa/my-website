@@ -1,106 +1,116 @@
-/* 共通設定 */
-body, html {
+/* Reset & basics */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Hiragino Kaku Gothic Pro', 'Helvetica Neue', sans-serif;
-    height: 100%;
-  }
-  
-  /* ヘッダー */
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 50px;
-    background-color: #fff;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
     box-sizing: border-box;
   }
   
-  .logo {
-    max-height: 60px;
+  body, html {
+    font-family: "Hiragino Kaku Gothic Pro","Arial",sans-serif;
+    scroll-behavior: smooth;
   }
   
-  /* メニュー */
-  nav ul.menu {
-    list-style: none;
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
     display: flex;
-    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
   }
   
-  nav ul.menu li a {
+  .logo {
+    height: 50px;
+  }
+  
+  .menu-btn {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .drawer {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    transition: right 0.3s ease;
+    padding-top: 60px;
+  }
+  
+  .drawer ul {
+    list-style: none;
+  }
+  
+  .drawer li {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .drawer a {
+    color: white;
     text-decoration: none;
-    color: #000;
-    font-weight: bold;
+    font-size: 18px;
   }
   
-  /* HOME ページ */
-  main.home {
+  .drawer.open {
+    right: 0;
+  }
+  
+  /* Sections */
+  .section {
     height: 100vh;
-    background: url('images/background.jpg') center center / cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url('images/background.jpg') center/cover no-repeat;
+    color: white;
     text-align: center;
-    color: #fff;
+    padding: 20px;
   }
   
   .home-text h1 {
-    font-size: 4em;
+    font-size: 60px;
     margin-bottom: 20px;
   }
   
   .home-text p {
-    font-size: 1.5em;
+    font-size: 20px;
+    line-height: 1.5;
   }
   
-  /* About ページ */
-  main.about {
-    min-height: 100vh;
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px;
+  .content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
   }
   
-  /* Access ページ */
-  main.access {
-    min-height: 100vh;
-    background-color: #fff;
-    color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px;
+  .content p, .content ul {
+    font-size: 18px;
+    margin-bottom: 15px;
   }
   
-  /* Contact ページ */
-  main.contact {
-    min-height: 100vh;
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px;
+  #contact-form input, #contact-form textarea {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
   }
   
-  /* フッター */
+  #contact-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
   footer {
     text-align: center;
     padding: 20px;
-    background-color: #fff;
-    color: #000;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    background: rgba(0,0,0,0.7);
   }
   
