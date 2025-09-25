@@ -1,4 +1,4 @@
-/* Reset & basics */
+/* Reset & Base */
 * {
     margin: 0;
     padding: 0;
@@ -6,111 +6,111 @@
   }
   
   body, html {
-    font-family: "Hiragino Kaku Gothic Pro","Arial",sans-serif;
+    height: 100%;
+    font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
     scroll-behavior: smooth;
   }
   
+  /* Background */
+  section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Header & Drawer */
   header {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(0,0,0,0.7);
-    z-index: 1000;
+    left: 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
   }
   
   .logo {
     height: 50px;
   }
   
-  .menu-btn {
+  #menu-btn {
     font-size: 30px;
     cursor: pointer;
-    color: white;
+    color: #fff;
   }
   
-  .drawer {
+  #drawer-menu {
     position: fixed;
     top: 0;
     right: -250px;
     width: 250px;
     height: 100%;
-    background: rgba(0,0,0,0.9);
-    transition: right 0.3s ease;
-    padding-top: 60px;
-  }
-  
-  .drawer ul {
+    background-color: rgba(0,0,0,0.95);
     list-style: none;
+    padding: 60px 20px;
+    transition: right 0.3s ease;
+    z-index: 999;
   }
   
-  .drawer li {
-    margin: 20px 0;
-    text-align: center;
-  }
-  
-  .drawer a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .drawer.open {
+  #drawer-menu.open {
     right: 0;
   }
   
-  /* Sections */
-  .section {
-    height: 100vh;
+  #drawer-menu li {
+    margin: 20px 0;
+  }
+  
+  #drawer-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+  }
+  
+  /* Section Content */
+  .section-content {
+    background-color: rgba(0,0,0,0.5);
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  /* Contact Form */
+  form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('images/background.jpg') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
   }
   
-  .home-text h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
-  }
-  
-  .home-text p {
-    font-size: 20px;
-    line-height: 1.5;
-  }
-  
-  .content h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-  }
-  
-  .content p, .content ul {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-  
-  #contact-form input, #contact-form textarea {
-    display: block;
-    width: 80%;
-    margin: 10px auto;
+  form input, form textarea {
+    margin: 10px 0;
     padding: 10px;
-    font-size: 16px;
+    border: none;
+    border-radius: 5px;
   }
   
-  #contact-form button {
-    padding: 10px 20px;
-    font-size: 16px;
+  form button {
+    padding: 10px;
+    margin-top: 10px;
     cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-weight: bold;
   }
   
+  /* Footer */
   footer {
     text-align: center;
-    padding: 20px;
-    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    background-color: rgba(0,0,0,0.7);
   }
   

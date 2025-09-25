@@ -1,24 +1,23 @@
-// Drawer menu toggle
 const menuBtn = document.getElementById('menu-btn');
-const drawer = document.getElementById('drawer');
+const drawerMenu = document.getElementById('drawer-menu');
 
 menuBtn.addEventListener('click', () => {
-  drawer.classList.toggle('open');
+  drawerMenu.classList.toggle('open');
 });
 
-// Close drawer when clicking outside
+// Click outside to close menu
 document.addEventListener('click', (e) => {
-  if(!drawer.contains(e.target) && !menuBtn.contains(e.target)) {
-    drawer.classList.remove('open');
+  if (!drawerMenu.contains(e.target) && e.target !== menuBtn) {
+    drawerMenu.classList.remove('open');
   }
 });
 
-// Contact form mock submission
-const form = document.getElementById('contact-form');
-const confirmMsg = document.getElementById('contact-confirm');
+// Contact form dummy submit
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
 
-form.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  confirmMsg.style.display = 'block';
-  form.reset();
+  formStatus.textContent = "Message sent! (Backend not implemented yet)";
+  contactForm.reset();
 });
