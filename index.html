@@ -1,80 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>YOLO Vintage Polo Shop</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuta Iizawa Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ヘッダー -->
   <header>
-    <div class="logo-container">
-      <a href="#home"><img src="images/logo.JPG" alt="YOLO Logo" class="logo"></a>
-    </div>
-    <div id="menu-btn">&#9776;</div>
-    <ul id="drawer-menu">
-      <li><a href="#home">HOME</a></li>
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="#access">ACCESS</a></li>
-      <li><a href="#contact">CONTACT</a></li>
-    </ul>
+    <div class="logo">Yuta Iizawa</div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <section id="home">
-      <div class="section-content">
-        <h1>YOLO</h1>
-        <p>Sapporo's Vintage Polo Specialist.<br>
-        You Only Live Once.<br>
-        Discover classic Polo styles curated for enthusiasts.</p>
-      </div>
-    </section>
+  <!-- ヒーローセクション -->
+  <section id="hero">
+    <h1>Yuta Iizawa</h1>
+    <p>Simulinkで制御開発を得意とし、AI技術に挑戦するエンジニア</p>
+    <a href="#projects" class="btn">実績を見る</a>
+  </section>
 
-    <section id="about">
-      <div class="section-content">
-        <h2>About YOLO</h2>
-        <p>Founded on the founder's lifelong dream of independence, opened on 10000th day birthday, Feb 2028.<br>
-        YOLO specializes in vintage POLO Ralph Lauren fashion, catering to enthusiasts aged 10s to 40s.<br>
-        Each item includes detailed tags for beginners to advanced collectors.</p>
-      </div>
-    </section>
+  <!-- プロフィール -->
+  <section id="profile">
+    <h2>プロフィール</h2>
+    <p>組み込みエンジニアとして実務経験あり。現在はフロントエンドとAI技術を学習中。AI×Web領域への挑戦を目指しています。</p>
+  </section>
 
-    <section id="access">
-      <div class="section-content">
-        <h2>Access</h2>
-        <p>Address: Toyohira 2-2-1-2, Sapporo<br>
-        Nearest Station: 2-min walk from Kikusui Station (Subway)<br>
-        <a href="https://www.google.com/maps/place/%E8%8F%8A%E6%B0%B4%E9%A7%85" target="_blank">View on Google Maps</a></p>
-      </div>
-    </section>
+  <!-- スキル -->
+  <section id="skills">
+    <h2>スキル</h2>
+    <div class="skill-card">Simulink（組み込み）</div>
+    <div class="skill-card">HTML / CSS / JS（学習中）</div>
+    <div class="skill-card">GPT活用（学習中）</div>
+  </section>
 
-    <section id="contact">
-      <div class="section-content">
-        <h2>Contact</h2>
-        <form id="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="tel" name="tel" placeholder="Phone">
-          <textarea name="message" placeholder="Message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-        <p id="form-status"></p>
-      </div>
-    </section>
+  <!-- プロジェクト -->
+  <section id="projects">
+    <h2>プロジェクト</h2>
+    <div class="project-card">
+      <h3>産業機器制御開発</h3>
+      <p>Simulink / C / 組み込みLinux<br>担当：詳細設計〜評価</p>
+    </div>
+    <div class="project-card">
+      <h3>GPTを活用した自動文章生成ツール</h3>
+      <p>JavaScript / GPT API<br>担当：設計・開発・テスト</p>
+    </div>
+  </section>
 
-    <section id="sns">
-      <div class="section-content">
-        <h2>Follow Us</h2>
-        <p>Instagram: <a href="https://www.instagram.com/yuta_0929_/" target="_blank">@yuta_0929_</a></p>
-        <p>Facebook: Coming Soon</p>
-        <p>Official LINE: Coming Soon</p>
-      </div>
-    </section>
-  </main>
+  <!-- お問い合わせ -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>GitHub / LinkedIn / メールでご連絡ください</p>
+  </section>
 
+  <!-- フッター -->
   <footer>
-    <p>© 2028 YOLO Co., Ltd.</p>
+    <p>&copy; 2025 Yuta Iizawa</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
